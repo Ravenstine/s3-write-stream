@@ -20,6 +20,7 @@ function factory(config) {
     if (typeof dest === 'string') dest = {
         Key: dest
       , ACL: 'public-read'
+      , ContentType: (config.ContentType || 'application/octet-stream')
     }
 
     dest.Bucket = dest.Bucket || config.Bucket
